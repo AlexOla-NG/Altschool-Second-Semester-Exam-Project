@@ -1,0 +1,10 @@
+.stats-wrapper {
+  display: flex;
+  text-align: center;
+}
+
+.stats-wrapper .number {
+  color: grey;
+  font-size: 2rem;
+  font-weight: 600;
+}

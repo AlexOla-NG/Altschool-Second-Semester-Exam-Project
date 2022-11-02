@@ -1,0 +1,30 @@
+section {
+  padding: 2rem 10vw;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-profile > img {
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  width: 10rem;
+}
+
+.user-profile > .user-name {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-name > .bio {
+  margin-top: 1rem;
+}
+
+.user-profile > hr {
+  border-color: sandybrown;
+  min-width: 15rem;
+  width: 20rem;
+}
