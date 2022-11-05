@@ -12,6 +12,13 @@
 * {
   margin: 0;
 }
+
+:root {
+  --gray: hsl(0, 0%, 50%);
+  --brown: hsl(28, 87%, 67%);
+  --github-blue: hsl(214, 50%, 50%);
+}
+
 /*
   3. Allow percentage-based heights in the application
 */
@@ -74,4 +81,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  padding: 2rem 10vw;
 }

@@ -1,12 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-import Stats from "../components/Stats";
+import Stats from "../components/stats/Stats";
+import RepoList from "../components/repoList/RepoList";
 import "./home.css";
 
 // STUB: page will hold list of repos, home page UI
+// store fetched data in localStorage, helps manage network downtime
 
-const Home = ({ userData }) => {
+const Home = ({ userData, repoData }) => {
   const { avatar_url, name, login, bio, public_repos, followers, following } =
     userData;
   return (
@@ -20,9 +22,14 @@ const Home = ({ userData }) => {
             <p className="bio">{bio}</p>
           </div>
           <hr />
-          <Stats />
+          <Stats
+            followers={followers}
+            following={following}
+            repositories={public_repos}
+          />
         </article>
       </section>
+      <RepoList repoData={repoData} />
       <Outlet />
     </>
   );

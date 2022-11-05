@@ -1,0 +1,16 @@
+.stats-wrapper {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.stats-wrapper .number {
+  color: var(--gray);
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.stats-wrapper div > p {
+  text-transform: capitalize;
+}

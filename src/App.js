@@ -7,6 +7,7 @@ import Error from "./pages/Error";
 
 const App = () => {
   const [userData, setUserData] = useState([]);
+  const [repoData, setRepoData] = useState([]);
 
   const getUserData = async () => {
     const response = await fetch("https://api.github.com/users/AlexOla-NG");
@@ -15,14 +16,27 @@ const App = () => {
     console.log(userData);
   };
 
+  const getRepoData = async () => {
+    const response = await fetch(
+      "https://api.github.com/users/AlexOla-NG/repos"
+    );
+    const data = await response.json();
+    setRepoData(data);
+    console.log(repoData);
+  };
+
   useEffect(() => {
     getUserData();
+    getRepoData();
   }, []);
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home userData={userData} />}>
+        <Route
+          path="/"
+          element={<Home userData={userData} repoData={repoData} />}
+        >
           <Route path="/repo/:id" element={<SingleRepo />} />
         </Route>
         <Route path="*" element={<Error />} />
