@@ -1,10 +1,11 @@
 section > h2 {
   text-align: center;
+  padding-bottom: 2rem;
 }
 
 .repo-card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 2fr));
   gap: 1.5rem;
 }
 
@@ -13,12 +14,13 @@ section > h2 {
   flex-direction: column;
   gap: 1rem;
   border: 1px solid var(--gray);
-  padding: 1rem;
-  max-width: 20rem;
+  padding: 1rem 1.5rem;
+  /* max-width: 20rem; */
 }
 
 .repo-card > h3 {
   color: var(--github-blue);
+  text-transform: lowercase;
 }
 
 .repo-card > div {

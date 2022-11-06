@@ -18,7 +18,7 @@ const RepoCard = (props) => {
           <span>
             <Star style={{ fill: "gray" }} />
           </span>
-          <span>{props.stars}</span>
+          <span>{props.stargazers_count}</span>
         </span>
         <span className="repo-card-meta">
           <span>
@@ -37,6 +37,6 @@ RepoCard.defaultProps = {
   name: "Alex-Ola-NG",
   description: "Config files for my GitHub profile.",
   language: "CSS",
-  stars: 6,
+  stargazers_count: 6,
   forks: 9,
 };
