@@ -9,6 +9,7 @@ import "./repo-list.css";
 
 const RepoList = ({ repoData }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  // eslint-disable-next-line no-unused-vars
   const [postsPerPage, setPostsPerPage] = useState(3);
 
   // Get current posts
